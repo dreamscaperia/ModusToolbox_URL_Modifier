@@ -2,11 +2,11 @@
 
 ModusToolbox users may run into errors like “OpenSSL SSL_read: Software caused connection abort, errno 113” while running github.com-related git_clone/git_fetch in ModusToolbox. It means your connection to github.com is blocked for some reason.
 
-In this case, you can turn to use some third-party repo_relaying servers, like *ghproxy.com*, to bypass the restrictions. Basically, you need to run the following GIT_config command to make it work in ModusToolbox:
+In this case, you can turn to using some third-party repo_relaying servers, like *ghproxy.com*, to bypass the restrictions. Basically, you need to run the following GIT_config command to make it work in ModusToolbox:
 
 `git config --system url."https://ghproxy.com/https://github.com".insteadOf https://github.com`
 
-The tool is designed to help you with that. It automatically locate your ModusToolbox and add the value, and then handle the conflicting settings.
+The tool is designed to help you with that. It automatically locates your ModusToolbox and add the value, and then handle the conflicting settings.
 
 
 ## Guide
