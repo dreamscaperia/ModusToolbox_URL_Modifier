@@ -6,7 +6,7 @@ In this case, you can turn to using some third-party repo_relaying servers, like
 
 `git config --system url."https://ghproxy.com/https://github.com".insteadOf https://github.com`
 
-The tool is designed to help you with that. It automatically locates your ModusToolbox and add the value, and then handle the conflicting settings.
+The tool is designed to help you with that. It automatically locates your ModusToolbox and adds the value, and then handles the conflicting settings.
 
 
 ## Guide
