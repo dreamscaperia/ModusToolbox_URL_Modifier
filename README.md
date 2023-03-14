@@ -17,6 +17,10 @@ b) Run the file ***Install.cmd***.
 
 c) Reboot ModusToolbox and done.
 
+d) Use the file ***Uninstall.cmd*** to remove the tool from your system.
+
+d) If a new version of ModusToolbox is installed, uninstall and then reinstall the tool again.
+
 
 ## Notes
 
