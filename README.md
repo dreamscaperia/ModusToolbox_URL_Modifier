@@ -30,4 +30,6 @@ b) *ghproxy.com* is adopted in the tool but not part of the tool. Visit [ghproxy
 
 c) Support ModusToolbox 2.x and hopefully later.
 
-d) The tool is provided AS IS. There is NO WARRANTY.
+d) The tool only helps you restore accessibility to the GitHub content of ModusToolbox. If you need to use any other content of ModusToolbox (when the variable CyRemoteManifestsOverride is touched by you), you have to uninstall it first or you might see more issues coming.
+
+e) The tool is provided AS IS. There is NO WARRANTY.
