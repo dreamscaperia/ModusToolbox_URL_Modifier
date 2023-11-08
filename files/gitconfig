@@ -1,2 +1,2 @@
-[url "https://ghproxy.com/https://github.com"]
+[url "https://mirror.ghproxy.com/https://github.com"]
 	insteadOf = https://github.com
