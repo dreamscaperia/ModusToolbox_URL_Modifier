@@ -1,5 +1,5 @@
 # Auther: dreamscaperia @github.com
-# Version: 0.1.7.5
+# Version: 0.1.8.2
 
 $InstPath = Get-ChildItem -LiteralPath HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall |%{if($_.GetValue("DisplayName") -like "*ModusToolbox*"){$_.GetValue("InstallLocation")}}|Select-Object -Last 1
 if ( -not $InstPath ){ $InstPath = Get-ChildItem -LiteralPath HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall |%{if($_.GetValue("DisplayName") -like "*ModusToolbox*"){$_.GetValue("InstallLocation")}}|Select-Object -Last 1 }
