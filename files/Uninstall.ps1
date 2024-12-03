@@ -1,8 +1,8 @@
 # Auther: dreamscaperia @github.com
-# Version: 0.1.8.5
+# Version: 0.1.9.0
 
-$InstPath = Get-ChildItem -LiteralPath HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall |%{if($_.GetValue("DisplayName") -like "*ModusToolbox*"){$_.GetValue("InstallLocation")}}|Select-Object -Last 1
-if ( -not $InstPath ){ $InstPath = Get-ChildItem -LiteralPath HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall |%{if($_.GetValue("DisplayName") -like "*ModusToolbox*"){$_.GetValue("InstallLocation")}}|Select-Object -Last 1 }
+$InstPath = Get-ChildItem -LiteralPath HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall |%{if($_.GetValue("DisplayName") -like "*ModusToolbox*"){$_.GetValue("InstallLocation")}}|Where-Object {$_ -notlike "*Edge*" -and $_ -notlike "*Setup*" -and $_ -notlike "*packs*"}|Select-Object -Last 1
+if ( -not $InstPath ){ $InstPath = Get-ChildItem -LiteralPath HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall |%{if($_.GetValue("DisplayName") -like "*ModusToolbox*"){$_.GetValue("InstallLocation")}}|Where-Object {$_ -notlike "*Edge*" -and $_ -notlike "*Setup*" -and $_ -notlike "*packs*"}|Select-Object -Last 1 }
 Get-ChildItem -LiteralPath $instpath -Filter "tool*"|%{
     if (Test-Path -LiteralPath ($_.FullName + "\modus-shell\etc\gitconfig")) {
         Remove-Item -LiteralPath ($_.FullName + "\modus-shell\etc\gitconfig") -Force
